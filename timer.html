@@ -13,20 +13,21 @@ body{
   background:#F7F9F7;
   display:flex;flex-direction:column;
   align-items:center;justify-content:center;
-  min-height:100vh;
+  height:100vh;width:100vw;
   overflow:hidden;
+  position:fixed;top:0;left:0;
 }
 
 .congress{
   font-size:12px;color:#888888;
   letter-spacing:3px;text-transform:uppercase;
-  margin-bottom:2rem;text-align:center;
+  margin-bottom:min(2rem,1.5vh);text-align:center;
 }
 
 .timer-circle{
-  width:340px;height:340px;border-radius:50%;
+  width:min(340px,38vh);height:min(340px,38vh);border-radius:50%;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  margin-bottom:2.5rem;position:relative;
+  margin-bottom:min(2.5rem,2vh);position:relative;
   transition:border-color .5s;
 }
 .timer-circle.warning .ring-fill{stroke:#E67E22}
@@ -39,7 +40,7 @@ body{
 
 .progress-ring{
   position:absolute;top:0;left:0;
-  width:340px;height:340px;
+  width:min(340px,38vh);height:min(340px,38vh);
   transform:rotate(-90deg);
 }
 .ring-bg  {fill:none;stroke:rgba(0,0,0,.08);stroke-width:8}
@@ -50,7 +51,7 @@ body{
 }
 
 .time-display{
-  font-size:96px;font-weight:500;color:#2E5338;
+  font-size:min(96px,9vh);font-weight:500;color:#2E5338;
   line-height:1;letter-spacing:4px;
   transition:color .5s;
   position:relative;z-index:1;
@@ -66,7 +67,7 @@ body{
 }
 
 /* Presets */
-.presets{display:flex;gap:10px;margin-bottom:1.5rem;flex-wrap:wrap;justify-content:center}
+.presets{display:flex;gap:10px;margin-bottom:min(1.5rem,1.5vh);flex-wrap:wrap;justify-content:center}
 .preset{
   padding:8px 18px;border-radius:50px;
   border:1px solid rgba(0,0,0,.15);
@@ -147,7 +148,7 @@ body{
 
 <div class="status-bar" id="statusBar">Prêt</div>
 
-<div class="logo-wrap">www.congresarganier.ma</div>
+<div class="logo-wrap">www.congresarganier.com</div>
 
 <div class="hint" onclick="toggleFS()" title="Plein écran">⛶ Plein écran</div>
 
